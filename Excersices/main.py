@@ -1,8 +1,7 @@
-from base_datos_manager import BaseDatosManager, generar_nombre_aleatorio, generar_precio_aleatorio, generar_stock_aleatorio, laboratorios
+from base_datos_manager import BaseDatosManager
 import random
 
 if __name__ == "__main__":
-    # Crear una instancia de BaseDatosManager
     manager = BaseDatosManager(
         host='sql10.freesqldatabase.com',
         user='sql10705361',
@@ -10,26 +9,28 @@ if __name__ == "__main__":
         database='sql10705361'
     )
 
-    # Crear tabla de medicamentos
-    consulta_medicamentos = """
-    CREATE TABLE IF NOT EXISTS medicamentos (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        nombre VARCHAR(255),
-        laboratorio VARCHAR(255),
-        precio DECIMAL(10, 2),
-        stock INT
-    )
-    """
-    manager.crear_tabla("medicamentos", consulta_medicamentos)
+    # Crear tabla de productos desde main.py
+    nombre_tabla_productos = "productos12"
+    columnas_productos = [
+        "id INT AUTO_INCREMENT PRIMARY KEY",
+        "nombre VARCHAR(255)",
+        "descripcion TEXT",
+        "precio DECIMAL(10, 2)",
+        "stock INT"
+    ]
+    manager.crear_tabla(nombre_tabla_productos, columnas_productos)
 
-    # Llenar tabla de medicamentos
+    # Llenar tabla de productos con valores aleatorios
     cantidad = 100
-    manager.llenar_tabla("medicamentos", cantidad, lambda: (
-        generar_nombre_aleatorio(),
-        random.choice(laboratorios),
-        generar_precio_aleatorio(),
-        generar_stock_aleatorio()
-    ))
+    for _ in range(cantidad):
+        valores_productos = (
+            manager.generar_nombre_aleatorio(),
+            manager.generar_descripcion_aleatoria(),
+            manager.generar_precio_aleatorio(),
+            manager.generar_stock_aleatorio(),
+            manager.generar_direccion_aleatoria()  # Generar dirección aleatoria
+        )
+        manager.llenar_tabla(nombre_tabla_productos, valores_productos)
 
     # Otras operaciones con la base de datos...
 
