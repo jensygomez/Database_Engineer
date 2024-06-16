@@ -101,19 +101,58 @@ CREATE TABLE Empleados_Roles (
 
 --   #################################################333333333
 
--- Inserción de datos en la tabla Departamentos
+-- Insertar datos en la tabla Departamentos con la ubicación en un edificio de 6 pisos
 INSERT INTO Departamentos (nombre, ubicacion, telefono) VALUES
-    ('Tecnología', 'São Paulo', '(11) 555-1234'),
-    ('Recursos Humanos', 'Rio de Janeiro', '(21) 555-5678'),
-    ('Ventas', 'Brasília', '(61) 555-9012');
+('Recursos Humanos', 'Edificio Principal, Piso 1', '555-1001'),
+('Finanzas', 'Edificio Principal, Piso 1', '555-1002'),
+('TI', 'Edificio Principal, Piso 2', '555-2001'),
+('Marketing', 'Edificio Principal, Piso 2', '555-2002'),
+('Ventas', 'Edificio Principal, Piso 3', '555-3001'),
+('Operaciones', 'Edificio Principal, Piso 3', '555-3002'),
+('Investigación y Desarrollo', 'Edificio Principal, Piso 4', '555-4001'),
+('Servicio al Cliente', 'Edificio Principal, Piso 4', '555-4002'),
+('Legal', 'Edificio Principal, Piso 5', '555-5001'),
+('Compras', 'Edificio Principal, Piso 5', '555-5002'),
+('Calidad', 'Edificio Principal, Piso 6', '555-6001'),
+('Administración', 'Edificio Principal, Piso 6', '555-6002'),
+('Estrategia y Planificación', 'Edificio Principal, Piso 6', '555-6003'),
+('Comunicación Corporativa', 'Edificio Principal, Piso 6', '555-6004');
+
 
 -- Inserción de datos en la tabla Cargos
+-- Insertar datos en la tabla Cargos
 INSERT INTO Cargos (nombre_cargo) VALUES
-    ('Consultor'),
-    ('Analista'),
-    ('Gerente'),
-    ('Director'),
-    ('CEO');
+('Director General'),
+('Director de Recursos Humanos'),
+('Director Financiero'),
+('Director de Tecnologías de la Información (TI)'),
+('Director Comercial'),
+('Gerente de Operaciones'),
+('Gerente de Marketing'),
+('Gerente de Ventas'),
+('Gerente de Proyectos'),
+('Gerente de Servicio al Cliente'),
+('Gerente de Desarrollo de Productos'),
+('Gerente Legal'),
+('Especialista en Recursos Humanos'),
+('Especialista Financiero'),
+('Especialista en Tecnologías de la Información'),
+('Especialista en Marketing Digital'),
+('Especialista en Ventas'),
+('Técnico de Soporte IT'),
+('Analista de Datos'),
+('Asistente Administrativo'),
+('Asistente de Marketing'),
+('Asistente de Ventas'),
+('Auxiliar Administrativo'),
+('Auxiliar de Almacén'),
+('Recepcionista'),
+('Operador de Producción'),
+('Auxiliar de Servicio al Cliente'),
+('Auxiliar Legal'),
+('Auxiliar de Compras'),
+('Inspector de Calidad');
+
 
 -- Inserción de datos en la tabla Niveles
 INSERT INTO Niveles (nombre_nivel) VALUES
