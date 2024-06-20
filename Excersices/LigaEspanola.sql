@@ -67,21 +67,30 @@ CREATE TABLE Jugadores (
     FOREIGN KEY (equipo_id) REFERENCES Equipos(id)
 );
 
--- Insertar presidente
-INSERT INTO Presidentes (nombre, fecha_nacimiento, nacionalidad) VALUES ('Joan Laporta', '1962-06-29', 'Española');
+-- Insertar presidentes
+INSERT INTO Presidentes (nombre, fecha_nacimiento, nacionalidad) VALUES 
+('Joan Laporta', '1962-06-29', 'Española'),
+('Florentino Pérez', '1947-03-08', 'Española'),
+('Enrique Cerezo', '1948-02-27', 'Española');
 
 -- Insertar directivos
 INSERT INTO Directivos (nombre, cargo, fecha_nacimiento, nacionalidad) VALUES 
 ('Mateu Alemany', 'Director de Fútbol', '1963-02-24', 'Española'),
-('Ramon Planes', 'Secretario Técnico', '1967-09-16', 'Española');
+('Ramon Planes', 'Secretario Técnico', '1967-09-16', 'Española'),
+('Emilio Butragueño', 'Director de Relaciones Institucionales', '1963-07-22', 'Española'),
+('Miguel Ángel Gil Marín', 'Consejero Delegado', '1963-11-25', 'Española');
 
 -- Insertar staff técnico
 INSERT INTO StaffTecnico (nombre, rol, fecha_nacimiento, nacionalidad) VALUES 
-('Xavi Hernández', 'Asistente Técnico', '1980-01-25', 'Española');
+('Xavi Hernández', 'Asistente Técnico', '1980-01-25', 'Española'),
+('David Bettoni', 'Asistente Técnico', '1971-11-23', 'Francesa'),
+('Oscar Ortega', 'Preparador Físico', '1958-03-11', 'Uruguaya');
 
--- Insertar entrenador
+-- Insertar entrenadores
 INSERT INTO Entrenadores (nombre, fecha_nacimiento, nacionalidad, experiencia) VALUES 
-('Xavi Hernández', '1980-01-25', 'Española', 5);
+('Xavi Hernández', '1980-01-25', 'Española', 5),
+('Carlo Ancelotti', '1959-06-10', 'Italiana', 25),
+('Diego Simeone', '1970-04-28', 'Argentina', 15);
 
 -- Insertar posiciones
 INSERT INTO Posiciones (nombre) VALUES 
@@ -90,13 +99,24 @@ INSERT INTO Posiciones (nombre) VALUES
 ('Mediocampista'), 
 ('Delantero');
 
--- Insertar equipo FC Barcelona
+-- Insertar equipos
 INSERT INTO Equipos (nombre, presidente_id, entrenador_id) VALUES 
-('FC Barcelona', 1, 1);
+('FC Barcelona', 1, 1),
+('Real Madrid', 2, 2),
+('Atlético de Madrid', 3, 3);
 
 -- Insertar jugadores
 INSERT INTO Jugadores (nombre, fecha_nacimiento, nacionalidad, posicion_id, equipo_id) VALUES 
 ('Marc-André ter Stegen', '1992-04-30', 'Alemana', 1, 1),
 ('Gerard Piqué', '1987-02-02', 'Española', 2, 1),
 ('Sergio Busquets', '1988-07-16', 'Española', 3, 1),
-('Lionel Messi', '1987-06-24', 'Argentina', 4, 1);
+('Lionel Messi', '1987-06-24', 'Argentina', 4, 1),
+('Thibaut Courtois', '1992-05-11', 'Belga', 1, 2),
+('Sergio Ramos', '1986-03-30', 'Española', 2, 2),
+('Luka Modrić', '1985-09-09', 'Croata', 3, 2),
+('Karim Benzema', '1987-12-19', 'Francesa', 4, 2),
+('Jan Oblak', '1993-01-07', 'Eslovena', 1, 3),
+('Stefan Savić', '1991-01-08', 'Montenegrina', 2, 3),
+('Koke', '1992-01-08', 'Española', 3, 3),
+('Luis Suárez', '1987-01-24', 'Uruguaya', 4, 3);
+
