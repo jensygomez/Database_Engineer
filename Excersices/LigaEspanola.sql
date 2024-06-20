@@ -118,5 +118,11 @@ INSERT INTO Jugadores (nombre, fecha_nacimiento, nacionalidad, posicion_id, equi
 ('Jan Oblak', '1993-01-07', 'Eslovena', 1, 3),
 ('Stefan Savić', '1991-01-08', 'Montenegrina', 2, 3),
 ('Koke', '1992-01-08', 'Española', 3, 3),
-('Luis Suárez', '1987-01-24', 'Uruguaya', 4, 3);
+('Luis Suárez', '1987-01-24', 'Uruguaya', 4, 3)
+('Frenkie de Jong', '1997-05-12', 'Holandesa', 3, 1),
+('Antoine Griezmann', '1991-03-21', 'Francesa', 4, 1),
+('Vinícius Júnior', '2000-07-12', 'Brasilera', 4, 2),
+('Éder Militão', '1998-01-18', 'Brasilera', 2, 2),
+('João Félix', '1999-11-10', 'Portuguesa', 4, 3),
+('Saúl Ñíguez', '1994-11-21', 'Española', 3, 3);
 
